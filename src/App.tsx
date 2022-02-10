@@ -34,6 +34,7 @@ import { ModalExample } from './components/Model';
 
 import { AddBook } from './components/AddBook';
 import Books from './components/Books'
+import Villas from './components/Villas'
 
 
 setupIonicReact();

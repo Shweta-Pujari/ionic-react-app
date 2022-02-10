@@ -8,6 +8,7 @@ import {
   IonMenu,
   IonMenuToggle,
   IonNote,
+  IonCard,
 } from '@ionic/react';
 
 import { useLocation } from 'react-router-dom';
@@ -37,6 +38,12 @@ const appPages: AppPage[] = [
   {
     title: 'AddBook',
     url: '/AddBook',
+    iosIcon: mailOutline,
+    mdIcon: mailSharp
+  },
+  {
+    title: 'Villas',
+    url: '/Villas',
     iosIcon: mailOutline,
     mdIcon: mailSharp
   },
