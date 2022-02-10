@@ -29,110 +29,20 @@ const appPages: AppPage[] = [
     mdIcon: list
   },
   {
-    title: 'Profile',
-    url: '/Profile',
+    title: 'Books',
+    url: '/Books',
     iosIcon: mailOutline,
     mdIcon: mailSharp
   },
   {
-    title: 'Ion Card',
-    url: '/Card',
+    title: 'AddBook',
+    url: '/AddBook',
     iosIcon: mailOutline,
     mdIcon: mailSharp
   },
-  {
-    title: 'Check box',
-    url: '/CheckBox',
-    iosIcon: checkboxSharp,
-    mdIcon: checkboxSharp
-  },
-  {
-    title: 'Budge',
-    url: '/Budge',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
-  },
-  {
-    title: 'Chip',
-    url: '/Chip',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
-  },
-  {
-    title: 'Alert',
-    url: '/Alert',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
-  },
-  {
-    title: 'ActionSheet',
-    url: '/ActionSheet',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
-  },
-  {
-    title: 'InfiniteScroll',
-    url: '/InfiniteScroll',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
-  },
-  {
-    title: 'Progressbar',
-    url: '/Progressbar',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
-  },
-  {
-    title: 'Searchbar',
-    url: '/Searchbar',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
-  },
-  {
-    title: 'Toast',
-    url: '/Toast',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
-  },
-  {
-    title: 'Model',
-    url: '/Model',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
-  },
-  {
-    title: 'Outbox',
-    url: '/page/Outbox',
-    iosIcon: paperPlaneOutline,
-    mdIcon: paperPlaneSharp
-  },
-  {
-    title: 'Favorites',
-    url: '/page/Favorites',
-    iosIcon: heartOutline,
-    mdIcon: heartSharp
-  },
-  {
-    title: 'Archived',
-    url: '/page/Archived',
-    iosIcon: archiveOutline,
-    mdIcon: archiveSharp
-  },
-  {
-    title: 'Trash',
-    url: '/page/Trash',
-    iosIcon: trashOutline,
-    mdIcon: trashSharp
-  },
-  {
-    title: 'Spam',
-    url: '/page/Spam',
-    iosIcon: warningOutline,
-    mdIcon: warningSharp
-  }
+  
 ];
 
-const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
 const Menu: React.FC = () => {
   const location = useLocation();
@@ -155,15 +65,7 @@ const Menu: React.FC = () => {
           })}
         </IonList>
 
-        <IonList id="labels-list">
-          <IonListHeader>Labels</IonListHeader>
-          {labels.map((label, index) => (
-            <IonItem lines="none" key={index}>
-              <IonIcon slot="start" icon={bookmarkOutline} />
-              <IonLabel>{label}</IonLabel>
-            </IonItem>
-          ))}
-        </IonList>
+       
       </IonContent>
     </IonMenu>
   );

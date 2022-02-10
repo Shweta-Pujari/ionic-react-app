@@ -24,18 +24,17 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import List from './components/List';
 import DefaultPage from './components/DefaultPage';
-import {Profile} from './components/profile';
-import {CardExamples} from './components/IonCard';
-import { CheckboxExamples } from './components/CheckBox';
-import {BadgeExample} from './components/Budge'
-import { ChipExamples } from './components/Chip';
-import {AlertExample} from './components/Alert'
+
 import { ActionSheetExample } from './components/ActionSheet';
 import InfiniteScrollExample from './components/InfiniteScroll';
 import { ProgressbarExample } from './components/Progressbar';
 import { SearchBarExamples } from './components/SearchBar';
 import { ToastExample } from './components/Toast';
 import { ModalExample } from './components/Model';
+
+import { AddBook } from './components/AddBook';
+import Books from './components/Books'
+
 
 setupIonicReact();
 
@@ -49,44 +48,20 @@ const App: React.FC = () => {
           <Route path="/List" exact={true}>
             <List />
           </Route>
-          <Route path="/Card" exact={true}>
-            <CardExamples />
+                    
+          <Route path="/Books" exact={true}>
+            <Books/>
           </Route>
-          <Route path="/CheckBox" exact={true}>
-            <CheckboxExamples />
+          <Route path="/AddBook" exact={true}>
+            <AddBook/>
           </Route>
-          <Route path="/Profile" exact={true}>
-            <Profile />
-          </Route>
-          <Route path="/Budge" exact={true}>
-            <BadgeExample/>
-          </Route>
-          <Route path="/Chip" exact={true}>
-            <ChipExamples/>
-          </Route>
-          <Route path="/Alert" exact={true}>
-            <AlertExample/>
-          </Route>
-          <Route path="/ActionSheet" exact={true}>
-            <ActionSheetExample/>
-          </Route>
-          <Route path="/InfiniteScroll" exact={true}>
-            <InfiniteScrollExample/>
-          </Route>
-          <Route path="/Progressbar" exact={true}>
-            <ProgressbarExample/>
-          </Route>
-          <Route path="/Searchbar" exact={true}>
-            <SearchBarExamples/>
-          </Route>
-          <Route path="/Toast" exact={true}>
-            <ToastExample/>
-          </Route>
-          <Route path="/Model" exact={true}>
-            <ModalExample/>
+          
+          <Route path="/EditBook/:recordId" exact={true}>
+            <AddBook/>
           </Route>
           <Route path="/page/:name" exact={true}>
             <DefaultPage />
+            
           </Route>
           <Route path="/" exact={true}>
             <Redirect to="/page/Inbox" />

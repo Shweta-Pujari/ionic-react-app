@@ -1,6 +1,6 @@
-const apiEndPoint = "https://nodeapi.pyther.com/customer"
+const apiEndPoint = "https://nodeapi.pyther.com/api/book"
 
-export const getCustomers = async () =>{
+export const getBooks = async () =>{
   return fetch(apiEndPoint, {
               method: 'get',
                   headers: {
@@ -16,7 +16,7 @@ export const getCustomers = async () =>{
         });
 };
 
-export const addCustomer = async (record:any) =>{
+export const addBook = async (record:any) =>{
 return fetch(apiEndPoint, {
 method: 'post',
   headers: {
@@ -33,7 +33,7 @@ console.log(error);
 });
 }
 
-export const updateCustomer = async (record:any) =>{
+export const updateBook = async (record:any) =>{
 return fetch(apiEndPoint, {
 method: 'put',
   headers: {
@@ -50,7 +50,7 @@ console.log(error);
 });
 }
 
-export const deleteCustomer = async (id:any) =>{
+export const deleteBook = async (id:any) =>{
 return fetch(apiEndPoint, {
 method: 'delete',
   headers: {
@@ -67,7 +67,7 @@ console.log(error);
 });
 }
 
-export const getCustomerById = async (id:any) =>{
+export const getBookById = async (id:any) =>{
 return fetch(apiEndPoint + "/"+id, {
 method: 'get',
   headers: {
