@@ -21,12 +21,13 @@ interface myProps {
     publisher: string;
     isbn:any;
     year:any;
-    cover:Url;
+    cover:string;
  }
 
 const List = () => {
   const history = useHistory();
-  const [bookList,setBooks] = useState([]);
+  let books:myBook[]=[];
+  const [bookList,setBooks] = useState(books);
   const loadBooks = async () =>{
     let tempData = await getBooks();
     setBooks(tempData);
@@ -57,7 +58,7 @@ const List = () => {
       <IonSearchbar onIonChange={e => setSearchText(e.detail.value!)} 
       showCancelButton="focus"></IonSearchbar>
        <IonList>
-        {bookList.map((data:any)=>{
+        {bookList.map((data:myBook)=>{
           return(
             <IonItem key={data.id}>
             <IonAvatar slot="start">

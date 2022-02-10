@@ -70,7 +70,8 @@ const Villa = () => {
             <p>{data.price}</p>
           </IonCardHeader>
           <IonCardContent>
-           <IonIcon icon={location}/>{data.Location} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <IonButton color="danger" size='small'  >More</IonButton>
+           <IonIcon icon={location}/>{data.Location} &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+           <IonButton color="danger" size='small'  >More</IonButton>
             <IonButton size='small' color="danger" >Book Villa</IonButton>
            
 
